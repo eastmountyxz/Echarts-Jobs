@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+   
+</head>
+
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="width: 600px;height:400px;"></div>
+    <!-- 引入 echarts.js -->
+    <script src="echarts.min.js"></script>
+	<script src="beijing.js"></script>
+    <script>
+     var myChart = echarts.init(document.getElementById('main'));
+     var option = {
+      title: {
+       text : '北京地图',
+       subtext : '-。-'
+      },
+      tooltip : {
+       trigger: 'item',
+       formatter: function(a){
+        return a[2];
+       }
+      },
+      legend: {
+       orient: 'vertical',
+       x:'right',
+       data:['数据名称']
+      },
+      dataRange: {
+       min: 0,
+       max: 1000,
+       color:['orange','yellow'],
+       text:['高','低'],   // 文本，默认为数值文本
+       calculable : true
+      },
+      series : [
+       {
+        name: '数据名称',
+        type: 'map',
+        mapType: '北京',
+        selectedMode : 'single',
+        itemStyle:{
+         normal:{label:{show:true}},
+         emphasis:{label:{show:true}}
+        },
+        data:[
+         {name: '怀柔区',value: Math.round(Math.random()*1000)},
+         {name: '延庆县',value: Math.round(Math.random()*1000)},
+         {name: '密云县',value: Math.round(Math.random()*1000)},
+         {name: '昌平区',value: Math.round(Math.random()*1000)},
+         {name: '平谷区',value: Math.round(Math.random()*1000)},
+         {name: '顺义区',value: Math.round(Math.random()*1000)},
+         {name: '门头沟区',value: Math.round(Math.random()*1000)},
+         {name: '海淀区',value: Math.round(Math.random()*1000)},
+         {name: '朝阳区',value: Math.round(Math.random()*1000)},
+         {name: '石景山区',value: Math.round(Math.random()*1000)},
+         {name: '西城区',value: Math.round(Math.random()*1000)},
+         {name: '东城区',value: Math.round(Math.random()*1000)},
+         {name: '宣武区',value: Math.round(Math.random()*1000)},
+         {name: '丰台区',value: Math.round(Math.random()*1000)},
+         {name: '房山区',value: Math.round(Math.random()*1000)},
+         {name: '通州区',value: Math.round(Math.random()*1000)},
+         {name: '大兴区',value: Math.round(Math.random()*1000)},
+          
+        ]
+       }
+      ]
+     };
+     myChart.setOption(option);    
+    </script>
+	</div>
+</body>
+</html>
