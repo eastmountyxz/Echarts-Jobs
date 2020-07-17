@@ -1,6 +1,10 @@
 # Echarts-Jobs
 该资源是作者学习Echarts可视化相关代码，希望对您有所帮助~
 
+具体内容包括：
+1.柱状图示例
+2.北京地图示例
+
 
 参考资料：<br />
 [Echarts字体和线条颜色设置操作笔记](https://blog.csdn.net/Eastmount/article/details/52823548) <br />
