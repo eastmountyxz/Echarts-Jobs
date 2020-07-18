@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+   
+</head>
+
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="width: 600px;height:400px;"></div>
+    <!-- 引入 echarts.js -->
+    <script src="echarts.min.js"></script>
+    <script src="china.js"></script>
+    <script>
+    var chart = echarts.init(document.getElementById('main'));
+    chart.setOption({
+        series: [{
+            type: 'map',
+            map: 'china'
+        }]
+    });
+    </script>
+	</div>
+</body>
+</html>
