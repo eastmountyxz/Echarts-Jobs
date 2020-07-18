@@ -9,6 +9,8 @@
 - 5.折线图示例 <br />
 
 
+随着作者深入，后续会分享更好的案例资源供大家学习使用。
+
 参考资料：<br />
 [Echarts字体和线条颜色设置操作笔记](https://blog.csdn.net/Eastmount/article/details/52823548) <br />
 [[Echarts可视化] 一.入门篇之简单绘制中国地图和贵州地区](https://blog.csdn.net/Eastmount/article/details/69938479) <br />
