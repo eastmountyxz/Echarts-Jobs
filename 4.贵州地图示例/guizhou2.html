@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+   
+</head>
+
+<body>
+    <!-- 为ECharts准备一个具备大小的Dom -->
+    <div id="main" style="width: 600px;height:400px;"></div>
+    <!-- 引入 echarts.js -->
+    <script src="echarts.min.js"></script>
+	 <script src="guizhou.js"></script>
+    <script>
+     var myChart = echarts.init(document.getElementById('main'));
+     var option = {
+      title: {
+       text : '贵州省各地区2016年建档立卡贫困人口分布图',
+       subtext : ''
+      },
+      series: [
+        {
+            name: '数据名称',
+        type: 'map',
+        mapType: '贵州',
+        selectedMode : 'single',
+        itemStyle:{
+             normal:{label:{show:true}},
+             emphasis:{label:{show:true}}
+            },
+            data:[
+             {name: '贵阳市',value: 1.37},
+             {name: '遵义市',value: 32.53},
+             {name: '六盘水市',value: 33.35},
+             {name: '毕节市',value: 92.51},
+             {name: '铜仁市',value: 43.04},
+             {name: '安顺市',value: 25.93},
+             {name: '黔西南布依族苗族自治州',value: 34.27},
+             {name: '黔东南苗族侗族自治州',value: 70.2},
+             {name: '黔南布依族苗族自治州',value: 45.36},  
+            ]
+        }]
+      };
+     myChart.setOption(option);    
+    </script>
+	</div>
+</body>
+</html>
