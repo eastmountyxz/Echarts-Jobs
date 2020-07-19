@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+   
+</head>
+
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="width: 600px;height:400px;"></div>
+    <!-- 引入 echarts.js -->
+    <script src="echarts.min.js"></script>
+    <script src="guizhou.js"></script>
+    <script>
+    var myChart = echarts.init(document.getElementById('main'));
+    var option = {
+      title: {
+       text : '贵州地图',
+       subtext : '各市区显示'
+      },
+      series: [
+        {
+            name: '数据名称',
+        type: 'map',
+        mapType: '贵州',
+        selectedMode : 'single',
+        itemStyle:{
+             normal:{label:{show:true}},
+             emphasis:{label:{show:true}}
+            }
+        }]
+      };
+     myChart.setOption(option);  
+    </script>
+	</div>
+</body>
+</html>
